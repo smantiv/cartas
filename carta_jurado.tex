@@ -1,0 +1,105 @@
+\documentclass[letterpaper,12pt]{article}
+
+% =====================
+% Template de constancia
+% =====================
+% Compilar con PDFLaTeX, XeLaTeX o LuaLaTeX.
+% Los archivos de imagen deben estar en la carpeta assets:
+% - assets/logo_javeriana.png
+% - assets/firma_mariela.png
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{mathptmx}
+
+\definecolor{javerianaBlue}{RGB}{0,91,145}
+
+\geometry{
+letterpaper,
+left=0.79in,
+right=1.18in,
+top=1.45in,
+bottom=1.15in,
+headheight=1.38in,
+headsep=0.08in,
+footskip=0.82in
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{%
+\vspace{0.08in}%
+\includegraphics[width=4.25in]{assets/logo_javeriana.png}%
+}
+
+\fancyfoot[L]{%
+\raisebox{0pt}[0pt][0pt]{%
+\begin{minipage}[c]{0.06in}
+{\color{javerianaBlue}\rule{0.8pt}{0.48in}}
+\end{minipage}%
+\hspace{0.08in}%
+\begin{minipage}[c]{5.4in}
+{\footnotesize
+Dirección, piso. Edificio - \textit{Bogotá D.C., Colombia}[-1pt]
+Teléfono: +57 (1) 320 8320 Ext. 0000}
+\end{minipage}%
+}%
+}
+
+
+% =====================
+% PLACEHOLDERS EDITABLES
+% =====================
+\newcommand{\FechaCarta}{[DÍA DE SEMANA DD DE MES DE AAAA]}
+\newcommand{\NombreJurado}{[NOMBRE DEL JURADO]}
+\newcommand{\CedulaJurado}{[CÉDULA DEL JURADO]}
+\newcommand{\TituloTrabajoGrado}{[TÍTULO DEL TRABAJO DE GRADO]}
+\newcommand{\NombresEstudiantes}{[NOMBRES DE LOS ESTUDIANTES]}
+\newcommand{\DirectorTrabajoGrado}{[NOMBRE DEL DIRECTOR]}
+\newcommand{\FechaSustentacion}{[FECHA DE SUSTENTACIÓN]}
+
+\begin{document}
+
+\fontsize{13}{16}\selectfont
+
+\vspace*{0.5in}
+
+\noindent\textbf{Bogotá, Colombia}\\
+\textbf{\FechaCarta}
+
+\vspace{0.55in}
+
+\noindent A quien pueda interesar,
+
+\vspace{0.16in}
+
+\justifying
+\noindent Por medio de la presente se deja constancia de que \textbf{\NombreJurado}, identificado con cédula \textbf{\CedulaJurado}, fue jurado del Trabajo de Grado \textit{``\TituloTrabajoGrado''}, realizado por los estudiantes \textbf{\NombresEstudiantes}, bajo la dirección del profesor \textbf{\DirectorTrabajoGrado}. El trabajo fue sustentado \FechaSustentacion.
+
+\vspace{2.25in}
+
+\noindent Atentamente,
+
+\vspace{0.08in}
+
+\noindent\includegraphics[width=1.7in]{assets/firma_mariela.png}
+
+\vspace{0.12in}
+
+{\fontsize{10}{12}\selectfont
+\noindent\textbf{Dra.\ Mariela J. Curiel H.}\\
+Directora de la Maestría de Ingeniería de Sistemas y Computación\
+Pontificia Universidad Javeriana, Bogotá.
+}
+
+\end{document}
